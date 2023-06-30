@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.container{
+    height: 100svh;
+    width: 100svw;
+}
+
+.child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.rounded-box{
+    border: 2px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+#second{
+    padding: 2rem;
+    align-items: start;
+}
+
+#today {
+    background: black;
+    color: white;
+}
+
+.item {
+    border: 2px solid #000000;
+    border-radius: 400px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popup-background{
+    display: none;
+    position: absolute;
+    z-index: 998;
+    width: 100svw;
+    height: 100svh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: fit-content;
+    height: fit-content;
+    padding: 5rem;
+    background: white;
+    left: 0;
+    right: 0;
+    top: 30svh;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(6, 24, 44, 0.4) 0 0 0 2px, rgba(6, 24, 44, 0.65) 0 4px 6px -1px, rgba(255, 255, 255, 0.08) 0 1px 0 inset;
+    border-radius: 25px;
+}
+
+#search-bar{
+    width: 500px;
+    margin: auto;
+    border: 1px solid #ddd;
+    padding: 20px;
+    color: #505060;
+}
+
+.autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.autocomplete-items {
+    position: absolute;
+    border: 1px solid #d4d4d4;
+    border-top: none;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    right: 0;
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:hover {
+    background-color: #e9e9e9;
+}
+
+@media screen and (min-width: 1001px) {
+    .container{
+        background-image: url("background.jpg");
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .description {
+        font-size: 8svw;
+    }
+
+    .rounded-box {
+        width: 150px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .text, .date {
+        font-size: 24px;
+    }
+
+    #second {
+        justify-content: end;
+    }
+
+    .scroll-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #third {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+
+    .item {
+        width: 75px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .container{
+        background-image: url("background_mobile.jpg");
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow-x: hidden;
+    }
+    #first {
+        display: none;
+    }
+
+    .description {
+        font-size: 40svw;
+    }
+
+    .rounded-box {
+        width: 450px;
+        height: 150px;
+        border-radius: 36px;
+        padding: 36px;
+    }
+
+    .date{
+        font-size: 48px;
+    }
+
+    .text{
+        font-size: 80px;
+    }
+
+    #second {
+        order: 1;
+        justify-content: center;
+    }
+    .scroll-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        order: 3;
+    }
+
+    #third {
+        gap: 45px;
+        padding: 2rem 2rem 8rem;
+        width: fit-content;
+    }
+    #fourth{
+        order: 2;
+    }
+
+
+    .icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .item {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        width: 150px;
+        height: 300px;
+        border-width: 5px;
+    }
+
+    #search-bar {
+        width: 70svw;
+        font-size: 5rem;
+    }
+    .autocomplete-items {
+        font-size: 4rem;
+    }
+}

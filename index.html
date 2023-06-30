@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WeatherMan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="popup-background">
+    <div class="popup">
+        <div class="autocomplete">
+            <label for="search-bar"></label><input id="search-bar" type="text" placeholder="Search...">
+            <div id="autocomplete-list" class="autocomplete-items"></div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="child" id="first">
+        <h1 class="description" id="description">It's hot.</h1>
+    </div>
+    <div class="child" id="second">
+        <div class="rounded-box">
+            <p class="text">BLIDA</p>
+        </div>
+    </div>
+    <div class="scroll-container">
+        <div class="child" id="third">
+            <div class="item" id="today"><img src="clearT.png" alt="icon" class="icon">
+                <p class="date">Fri</p>
+            </div>
+            <div class="item"><img src="clear.png" alt="icon" class="icon">
+                <p class="date">Sat</p>
+            </div>
+            <div class="item"><img src="clear.png" alt="icon" class="icon">
+                <p class="date">Sun</p>
+            </div>
+            <div class="item"><img src="clear.png" alt="icon" class="icon">
+                <p class="date">Mon</p>
+            </div>
+            <div class="item"><img src="clear.png" alt="icon" class="icon">
+                <p class="date">Tue</p>
+            </div>
+        </div>
+    </div>
+    <div class="child" id="fourth">
+        <h1 class="description" id="temp">35°C</h1>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
